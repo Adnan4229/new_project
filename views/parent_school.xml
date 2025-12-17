@@ -23,6 +23,12 @@
                             <field name="email"/>
                             <field name="address"/>
                         </group>
+                        <notebook>
+                            <page string="children">
+                                <field name="student_ids"/>
+
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>

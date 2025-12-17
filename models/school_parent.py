@@ -7,4 +7,4 @@ class SchoolParent(models.Model):
     phone = fields.Char(string='Phone Number')
     email = fields.Char(string='Email Address')
     address = fields.Char(string='Address')
-    # student_ids = fields.One2many(string='Students',)
+    student_ids = fields.One2many('student.school', 'parent_id')

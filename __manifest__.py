@@ -4,7 +4,11 @@
     'author': '',
     'category': 'Host Project Management',
 
+
+    'depends': ['base'],
+
     'data': [
+        # 'data/school_category_wise_groups.xml',
         'security/ir.model.access.csv',
         'views/menus.xml',
         'views/student_school.xml',
@@ -18,6 +22,7 @@
         'views/section_view.xml',
         'views/subject_view.xml',
     ],
+
     'assets': {
         'web.assets_backend': [
             'new_project/static/src/css/style.css',

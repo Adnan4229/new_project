@@ -30,6 +30,7 @@ class StudentSchool(models.Model):
     class_id = fields.Many2one('class.school', string="Class")
     section_id = fields.Many2one('section.school', string="Section")
     teacher_ids = fields.Many2many('teacher.school', string="Teachers")
+    parent_id = fields.Many2one('parent.school', string="Parent")
 
     # Linked child records
     attendance_ids = fields.One2many('attendance.school', 'student_id', string="Attendance")
