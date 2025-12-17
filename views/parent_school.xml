@@ -1,5 +1,4 @@
 <odoo>
-    <data>
         <record id="parent_school_view_list" model="ir.ui.view">
             <field name="name">parent.school.list</field>
             <field name="model">parent.school</field>
@@ -35,7 +34,6 @@
             <field name="view_mode">form,list</field>
         </record>
 
-
         <menuitem id="Parent_school" name="Parents" sequence="3" action="parent_action" parent="school_menu_root"/>
-    </data>
+
 </odoo>

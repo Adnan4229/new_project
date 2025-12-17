@@ -1,7 +1,7 @@
 <odoo>
-    <data>
-        <record id="exam_tree_view" model="ir.ui.view">
-            <field name="name">school.exam.tree</field>
+
+        <record id="exam_list_view" model="ir.ui.view">
+            <field name="name">school_exam_list</field>
             <field name="model">exam.school</field>
             <field name="arch" type="xml">
                 <list>
@@ -58,5 +58,5 @@
                 parent="school_menu_root"
                 action="exam_action"
                 sequence="8"/>
-    </data>
+
 </odoo>

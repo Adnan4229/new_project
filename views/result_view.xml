@@ -1,8 +1,7 @@
 <odoo>
-    <data>
 
-        <record id="school_result_tree_view" model="ir.ui.view">
-            <field name="name">school.result.tree</field>
+        <record id="school_result_list_view" model="ir.ui.view">
+            <field name="name">school_result_list</field>
             <field name="model">result.school</field>
             <field name="arch" type="xml">
                 <list>
@@ -13,7 +12,6 @@
                 </list>
             </field>
         </record>
-
 
         <record id="school_result_form_view" model="ir.ui.view">
             <field name="name">school.result.form</field>
@@ -45,6 +43,4 @@
             parent="school_menu_root"
             action="school_result_action"
             sequence="10"/>
-
-    </data>
 </odoo>

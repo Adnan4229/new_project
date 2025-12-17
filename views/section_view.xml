@@ -1,14 +1,13 @@
 <odoo>
-    <data>
 
-           <record id="section_list_view" model="ir.ui.view">
+        <record id="section_list_view" model="ir.ui.view">
             <field name="name">school.section.list</field>
             <field name="model">section.school</field>
             <field name="arch" type="xml">
                 <list>
 
-                            <field name="name"/>
-                            <field name="class_id"/>
+                    <field name="name"/>
+                    <field name="class_id"/>
 
                 </list>
             </field>
@@ -37,6 +36,6 @@
             <field name="view_mode">list,form</field>
         </record>
 
-          <menuitem id="section_school" name="Sections" sequence="5" action="action_section" parent="school_menu_root"/>
-    </data>
+        <menuitem id="section_school" name="Sections" sequence="5" action="action_section" parent="school_menu_root"/>
+
 </odoo>

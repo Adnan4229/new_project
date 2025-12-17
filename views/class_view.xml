@@ -1,7 +1,7 @@
 <odoo>
-    <data>
+
         <record id="class_list_view" model="ir.ui.view">
-            <field name="name">school.class.form</field>
+            <field name="name">school.class.list</field>
             <field name="model">class.school</field>
             <field name="arch" type="xml">
                 <list>
@@ -13,26 +13,29 @@
         </record>
 
 
-
         <record id="class_form_view" model="ir.ui.view">
             <field name="name">school.class.form</field>
             <field name="model">class.school</field>
             <field name="arch" type="xml">
                 <form>
                     <sheet>
+
                         <group>
                             <field name="name"/>
                             <field name="teacher_id"/>
                             <field name="subject_ids" widget="many2many_tags"/>
                         </group>
+
                         <notebook>
+
                             <page string="Sections">
                                 <field name="section_ids">
-                                    <tree editable="bottom">
+                                    <list editable="bottom">
                                         <field name="name"/>
-                                    </tree>
+                                    </list>
                                 </field>
                             </page>
+
                             <page string="Students">
                                 <field name="student_ids">
                                     <list>
@@ -41,7 +44,9 @@
                                     </list>
                                 </field>
                             </page>
+
                         </notebook>
+
                     </sheet>
                 </form>
             </field>
@@ -54,6 +59,13 @@
             <field name="view_mode">list,form</field>
         </record>
 
-          <menuitem id="class_school" name="Class" sequence="4" action="action_class" parent="school_menu_root"/>
-    </data>
+
+        <menuitem
+                id="class_school"
+                name="Classes"
+                parent="school_menu_root"
+                action="action_class"
+                sequence="4"/>
+
+
 </odoo>

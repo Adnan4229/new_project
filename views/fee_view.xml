@@ -1,7 +1,7 @@
 <odoo>
-    <data>
 
-        <record id="school_fee_tree_view" model="ir.ui.view">
+
+        <record id="school_fee_list_view" model="ir.ui.view">
             <field name="name">fee.school.list</field>
             <field name="model">fee.school</field>
             <field name="arch" type="xml">
@@ -47,5 +47,5 @@
             action="school_fee_action"
             sequence="9"/>
 
-    </data>
+
 </odoo>

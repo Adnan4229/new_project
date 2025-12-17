@@ -1,5 +1,5 @@
 <odoo>
-    <data>
+
 
         <record id="attendance_form_view" model="ir.ui.view">
             <field name="name">school.attendance.form</field>
@@ -39,5 +39,5 @@
 
         <menuitem id="attendance_school" name="Attendance" sequence="6"
                   action="action_attendance" parent="school_menu_root"/>
-    </data>
+
 </odoo>

@@ -1,0 +1,18 @@
+...............Background & Card Styles....................
+.bg-light-custom { background-color: #f0f8ff !important; }
+.bg-light-yellow { background-color: #fff9e6 !important; }
+.bg-light-green { background-color: #e6fff2 !important; }
+.bg-light-red { background-color: #ffe6e6 !important; }
+.card-shadow {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+................test and typography.........................
+.text-bold { font-weight: bold; color: #1e90ff; }
+.text-red { color: #ff4c4c; font-weight: bold; }
+.text-green { color: #28a745; font-weight: bold; }
+.text-center { text-align: center; }
+.text-uppercase { text-transform: uppercase; }
+.text-small { font-size: 0.85rem; }

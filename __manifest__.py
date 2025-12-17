@@ -6,6 +6,7 @@
 
     'data': [
         'security/ir.model.access.csv',
+        'views/menus.xml',
         'views/student_school.xml',
         'views/teacher_school.xml',
         'views/attendence_view.xml',
@@ -17,6 +18,11 @@
         'views/section_view.xml',
         'views/subject_view.xml',
     ],
+    'assets': {
+        'web.assets_backend': [
+            'new_project/static/src/css/style.css',
+        ],
+    },
 
     'images': ['static/description/icon.png'],
     'installable': True,

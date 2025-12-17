@@ -1,5 +1,5 @@
 <odoo>
-    <data>
+
         <record id="student_school_view_list" model="ir.ui.view">
             <field name="name">studnet.school.list</field>
             <field name="model">student.school</field>
@@ -19,20 +19,20 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                        <group string="Personal Information">
+                        <group string="Personal Information" class="text-green">
                             <field name="name"/>
                             <field name="roll_no"/>
                             <field name="phone"/>
                             <field name="address"/>
                             <field name="email"/>
                         </group>
-                        <group string="Other Information">
+                        <group string="Other Information" class="text-green">
                             <field name="dob"/>
                             <field name="gender"/>
                             <field name="age"/>
                             <field name="admission_date"/>
                             <field name="city"/>
-                            <fieled name="state"/>
+                            <field name="state"/>
                             <field name="zip_code"/>
                         </group>
                     </sheet>
@@ -47,7 +47,7 @@
         </record>
 
 
-        <menuitem id="school_menu_root" name="school management" sequence="1"/>
-        <menuitem id="student_school" name="Students" sequence="1" action="student_action" parent="school_menu_root"/>
-    </data>
+        <menuitem id="student_school" name="Students" sequence="1" action="student_action" parent="new_project.school_menu_root"
+                  />
+
 </odoo>

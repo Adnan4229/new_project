@@ -8,7 +8,7 @@ class StudentSchool(models.Model):
 
     # Basic Information
     name = fields.Char(string="Full Name", required=True)
-    roll_no = fields.Char(string="Roll Number", readonly=True)
+    roll_no = fields.Char(string="Roll Number")
     phone = fields.Char(string="Phone")
     email = fields.Char(string="Email")
     address = fields.Text(string="Address")
@@ -42,12 +42,6 @@ class StudentSchool(models.Model):
                 rec.age = date.today().year - rec.dob.year
             else:
                 rec.age = 0
-
-    @api.model
-    def create(self, vals):
-        # Generate Roll Number automatically
-        vals['roll_no'] = self.env['ir.sequence'].next_by_code('student.seq')
-        return super().create(vals)
 
     @api.constrains('age')
     def _check_age(self):
