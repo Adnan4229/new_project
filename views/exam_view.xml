@@ -1,0 +1,62 @@
+<odoo>
+    <data>
+        <record id="exam_tree_view" model="ir.ui.view">
+            <field name="name">school.exam.tree</field>
+            <field name="model">exam.school</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="class_id"/>
+                    <field name="subject_id"/>
+                    <field name="exam_date"/>
+                </list>
+            </field>
+        </record>
+
+
+        <record id="exam_form_view" model="ir.ui.view">
+            <field name="name">school.exam.form</field>
+            <field name="model">exam.school</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="class_id"/>
+                            <field name="subject_id"/>
+                            <field name="exam_date"/>
+                        </group>
+
+                        <notebook>
+                            <page string="Results">
+                                <field name="result_ids">
+                                    <list editable="bottom">
+                                        <field name="student_id"/>
+                                        <field name="marks"/>
+                                        <field name="grade" readonly="1"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="exam_action" model="ir.actions.act_window">
+            <field name="name">Exams</field>
+            <field name="res_model">exam.school</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+
+        <menuitem
+                id="menu_exam"
+                name="Exams"
+                parent="school_menu_root"
+                action="exam_action"
+                sequence="8"/>
+    </data>
+</odoo>

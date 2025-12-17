@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+
+        <record id="school_result_tree_view" model="ir.ui.view">
+            <field name="name">school.result.tree</field>
+            <field name="model">result.school</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="student_id"/>
+                    <field name="exam_id"/>
+                    <field name="marks"/>
+                    <field name="grade"/>
+                </list>
+            </field>
+        </record>
+
+
+        <record id="school_result_form_view" model="ir.ui.view">
+            <field name="name">school.result.form</field>
+            <field name="model">result.school</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="student_id"/>
+                            <field name="exam_id"/>
+                            <field name="marks"/>
+                            <field name="grade" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="school_result_action" model="ir.actions.act_window">
+            <field name="name">Results</field>
+            <field name="res_model">result.school</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <menuitem
+            id="menu_school_result"
+            name="Results"
+            parent="school_menu_root"
+            action="school_result_action"
+            sequence="10"/>
+
+    </data>
+</odoo>
